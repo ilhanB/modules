@@ -31,7 +31,7 @@ module "ec2_instances" {
 
   name = var.ec2_name
 
-  ami                    = "ami-0c5204531f799e0c6"
+  ami                    = "ami-0cff7528ff583bf9a"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [module.vpc.default_security_group_id]
   subnet_id              = module.vpc.public_subnets[0]
@@ -40,15 +40,4 @@ module "ec2_instances" {
     Terraform   = "true"
     Environment = "dev"
   }
-}
-module "s3_bucket" {
-  source = "terraform-aws-modules/s3-bucket/aws"
-
-  bucket = var.s3_bucket
-  acl    = "private"
-
-  versioning = {
-    enabled = true
-  }
-
 }

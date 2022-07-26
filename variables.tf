@@ -45,11 +45,5 @@ variable "vpc_tags" {
 
 variable "ec2_name" {
    description = "Enter the name of ec2"
-   default = "my-ec2-cluster"
+   default = "my-ec2-instance"
  }
-
-variable "s3_bucket" {
-  description = "Enter the name of s3 bucket"
-  default = "my-s3-bucket"
-  
-}
